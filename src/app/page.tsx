@@ -101,7 +101,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="#payment"
+              href="https://buy.stripe.com/6oU4gz2np1AT8X25hL9bO01"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg rounded-xl transition-colors shadow-lg shadow-green-500/25"
             >
               Start Getting Reviews — $29/mo
@@ -345,7 +345,7 @@ export default function Home() {
             </ul>
 
             <a
-              href="#payment"
+              href="https://buy.stripe.com/6oU4gz2np1AT8X25hL9bO01"
               className="mt-8 w-full inline-flex items-center justify-center px-8 py-4 bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg rounded-xl transition-colors shadow-lg shadow-green-500/25"
             >
               Start Getting Reviews
@@ -508,7 +508,7 @@ export default function Home() {
             Your competitors are asking for reviews after every job. Now you can too — in 10 seconds flat.
           </p>
           <a
-            href="#payment"
+            href="https://buy.stripe.com/6oU4gz2np1AT8X25hL9bO01"
             className="mt-8 inline-flex items-center justify-center px-10 py-4 bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg rounded-xl transition-colors shadow-lg shadow-green-500/25"
           >
             Start Getting Reviews — $29/mo

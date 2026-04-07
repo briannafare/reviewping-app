@@ -47,7 +47,7 @@ export function Header() {
             Dashboard
           </Link>
           <a
-            href="#payment"
+            href="https://buy.stripe.com/6oU4gz2np1AT8X25hL9bO01"
             className="inline-flex items-center px-5 py-2.5 bg-brand-green hover:bg-brand-green-hover text-white text-sm font-semibold rounded-lg transition-colors"
           >
             Get Started
@@ -111,7 +111,7 @@ export function Header() {
               Dashboard
             </Link>
             <a
-              href="#payment"
+              href="https://buy.stripe.com/6oU4gz2np1AT8X25hL9bO01"
               className="inline-flex items-center justify-center px-5 py-2.5 bg-brand-green text-white text-sm font-semibold rounded-lg"
             >
               Get Started — $29/mo
