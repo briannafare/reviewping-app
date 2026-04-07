@@ -1,15 +1,19 @@
 import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
-import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: "2023-10-16" });
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+
+async function getStripe() {
+  const Stripe = (await import("stripe")).default;
+  return new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: "2023-10-16" });
+}
 
 export async function POST(request: Request) {
   const body = await request.text();
   const signature = request.headers.get("stripe-signature")!;
 
-  let event: Stripe.Event;
+  const stripe = await getStripe();
+  let event: import("stripe").Stripe.Event;
   try {
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
   } catch (err) {
@@ -23,10 +27,9 @@ export async function POST(request: Request) {
     const customerName = session.customer_details?.name || "New User";
 
     if (customerEmail) {
-      // Create business record in Supabase
       const { error } = await supabase.from("businesses").insert({
         name: customerName,
-        google_review_link: "", // User fills this in dashboard
+        google_review_link: "",
         email: customerEmail,
       });
 
